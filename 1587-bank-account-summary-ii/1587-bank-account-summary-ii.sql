@@ -1,9 +1,8 @@
 # Write your MySQL query statement below
 SELECT
-    USERS.name,
-    SUM(TRANSACTIONS.amount) AS 'balance'
+    name,
+    SUM(amount) balance
 FROM USERS
     LEFT JOIN TRANSACTIONS
-        ON Users.account = Transactions.account
-GROUP BY
-    TRANSACTIONS.account HAVING balance > 10000
+        USING(account)
+GROUP BY account HAVING balance > 10000
