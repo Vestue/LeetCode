@@ -1,8 +1,7 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         used = [-1] * 128
-        result = 0
-        left = 0
+        result = left = 0
         lastChar = '0'
         
         for right in range(len(s)):
